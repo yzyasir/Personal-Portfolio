@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasir Zafar Portfolio</title>
+
+    <link rel="stylesheet" type="text/css" href="CSS/Style.css">
+</head>
+
+<body>
+    <!-- TODO - Add BGpic of myself -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/logo.png" class="logo" alt="Image of Logo">
+                <ul class="snip1189">
+                    <li class="current"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web and Cloud Specialist</p>
+                <h1>Hi, I'm <span>Yasir</span><br>From Woodbridge</h1>
+            </div>
+        </div>
+    </div>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/user.png">
+                </div>
+                <div class="about-col-1">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Faucibus et molestie ac feugiat sed lectus vestibulum. Laoreet id
+                        donec ultrices tincidunt arcu non. Non sodales neque sodales ut etiam sit amet nisl purus.
+                        Blandit volutpat maecenas volutpat blandit aliquam etiam. Metus aliquam eleifend mi in nulla
+                        posuere. In vitae turpis massa sed elementum tempus egestas. Porttitor rhoncus dolor purus non
+                        enim praesent elementum. Integer quis auctor elit sed vulputate mi sit amet mauris. At imperdiet
+                        dui accumsan sit amet nulla facilisi morbi. Sem nulla pharetra diam sit amet nisl suscipit.
+                        Rhoncus aenean vel elit scelerisque mauris. Sed pulvinar proin gravida hendrerit lectus.
+                    </p>
+                    <!-- Tab Links -->
+                    <div class="tab-titles">
+                        <!-- opentab is the function name -->
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web App Development</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Cloud Administration</span><br>Managing Resources Within Azure Services</li>
+                            <li><span>DevOps Managment</span><br>Developing Work Pipelines</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>US Army</span><br>Developed 4 Seemless Websites For DoD</li>
+                            <li><span>NCHS</span><br>Blah about NCHS</li>
+                            <li><span>ARMY</span><br>BLAH About army</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>George Mason University</span><br>Bachelors in Biology (3.8 GPA)</li>
+                            <li><span>Coding Dojo Bootcamp</span><br>Earned Wed Development Certification</li>
+                            <li><span>Personal Projects</span><br>My Personal Projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    var tablinks = document.getElementsByClassName('tab-links') //3 tab title class declared
+    var tabcontents = document.getElementsByClassName('tab-contents') //3 tab content classes declared
+    // Function needs to hide the link underline, and tab contents in the page
+    function opentab(tabname){ //passing in tab name
+        for(tablink of tablinks){ //tablinks which is defined above needs to be iterated in this for loop
+            tablink.classList.remove("active-link"); //Need to remove the active-link case on tab titles
+        }
+        for(tabcontent of tabcontents){ //tabvontents which is defined above needs to be iterated in this for loop
+            tabcontent.classList.remove("active-tab"); //Need to remove the active-tab case on tab contents
+        }
+        // Need to add an event where when you click something a link it will become active
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
