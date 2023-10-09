@@ -7,6 +7,8 @@
     <title>Yasir Zafar Portfolio</title>
 
     <link rel="stylesheet" type="text/css" href="CSS/Style.css">
+    <!-- Adding Font Awesome -->
+    <script src="https://kit.fontawesome.com/863db45ed7.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -14,7 +16,7 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="Images/logo.png" class="logo" alt="Image of Logo">
+                <img src="Images/Yasir_Logo_2.png" class="logo" alt="Image of Logo">
                 <ul class="snip1189">
                     <li class="current"><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
@@ -80,21 +82,98 @@
             </div>
         </div>
     </div>
-<script>
-    var tablinks = document.getElementsByClassName('tab-links') //3 tab title class declared
-    var tabcontents = document.getElementsByClassName('tab-contents') //3 tab content classes declared
-    // Function needs to hide the link underline, and tab contents in the page
-    function opentab(tabname){ //passing in tab name
-        for(tablink of tablinks){ //tablinks which is defined above needs to be iterated in this for loop
-            tablink.classList.remove("active-link"); //Need to remove the active-link case on tab titles
+    <!-- Services -->
+    <div class="services">
+        <div class="container">
+            <h1 class="subtitle">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Id interdum velit laoreet id. Nunc sed id semper risus in
+                        hendrerit gravida rutrum quisque. Eu non diam phasellus vestibulum lorem sed. Ultrices gravida
+                        dictum fusce ut placerat orci. Sit amet consectetur adipiscing elit duis tristique sollicitudin.
+                        Orci sagittis eu volutpat odio facilisis mauris sit amet.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-cloud"></i>
+                    <h2>Cloud Administration</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Id interdum velit laoreet id. Nunc sed id semper risus in
+                        hendrerit gravida rutrum quisque. Eu non diam phasellus vestibulum lorem sed. Ultrices gravida
+                        dictum fusce ut placerat orci. Sit amet consectetur adipiscing elit duis tristique sollicitudin.
+                        Orci sagittis eu volutpat odio facilisis mauris sit amet.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-dev"></i>
+                    <h2>DevOps</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Id interdum velit laoreet id. Nunc sed id semper risus in
+                        hendrerit gravida rutrum quisque. Eu non diam phasellus vestibulum lorem sed. Ultrices gravida
+                        dictum fusce ut placerat orci. Sit amet consectetur adipiscing elit duis tristique sollicitudin.
+                        Orci sagittis eu volutpat odio facilisis mauris sit amet.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Images/work-1.png">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/work-2.png">
+                    <div class="layer">
+                        <h3>DCS, G-9 Web App</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/work-3.png">
+                    <div class="layer">
+                        <h3>ASAIE&E Web App</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName('tab-links') //3 tab title class declared
+        var tabcontents = document.getElementsByClassName('tab-contents') //3 tab content classes declared
+        // Function needs to hide the link underline, and tab contents in the page
+        function opentab(tabname) { //passing in tab name
+            for (tablink of tablinks) { //tablinks which is defined above needs to be iterated in this for loop
+                tablink.classList.remove("active-link"); //Need to remove the active-link case on tab titles
+            }
+            for (tabcontent of tabcontents) { //tabvontents which is defined above needs to be iterated in this for loop
+                tabcontent.classList.remove("active-tab"); //Need to remove the active-tab case on tab contents
+            }
+            // Need to add an event where when you click something a link it will become active
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
         }
-        for(tabcontent of tabcontents){ //tabvontents which is defined above needs to be iterated in this for loop
-            tabcontent.classList.remove("active-tab"); //Need to remove the active-tab case on tab contents
-        }
-        // Need to add an event where when you click something a link it will become active
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-</script>
+    </script>
 </body>
+
 </html>
