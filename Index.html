@@ -17,13 +17,18 @@
         <div class="container">
             <nav>
                 <img src="Images/Yasir_Logo_2.png" class="logo" alt="Image of Logo">
-                <ul class="snip1189">
+                <!-- Added the "sidemenu" id for my javascript -->
+                <ul id="sidemenu" class="snip1189">
                     <li class="current"><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Contact</a></li>
+                    <!-- Added below line for smaller screen -->
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i> <!-- anded onlick and gave it a function to activate -->
                 </ul>
+                 <!-- Added below line for smaller screen -->
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i> <!-- anded onlick and gave it a function to activate -->
             </nav>
             <div class="header-text">
                 <p>Web and Cloud Specialist</p>
@@ -167,22 +172,26 @@
                 <h1 class="sub-title">Contact Me</h1>
                 <p><i class="fa-regular fa-paper-plane"></i> contact@email.com</p>
                 <p><i class="fa-solid fa-phone"></i> 703-371-1140</p>
-                <div class="social-icon">
+                <div class="social-icons">
                     <a href="#"><i class="fa-regular fa-message"></i></a>
                     <a href="#"><i class="fa-regular fa-message"></i></a>
                     <a href="#"><i class="fa-regular fa-message"></i></a>
                     <a href="#"><i class="fa-regular fa-message"></i></a>
                 </div>
+                <a href="#" class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
                 <form>
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="text" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit">Submit</button>
+                    <button type="submit" class="btn btn2">Submit</button>
                 </form>
             </div>
         </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright &copy; of Yasir.</p>
     </div>
 </div>
     <script>
@@ -199,6 +208,16 @@
             // Need to add an event where when you click something a link it will become active
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById('sidemenu');
+
+        function openmenu(){
+            sidemenu.style.right = '0'; //Whenever right is 0, it will be visible
+        }
+        function closemenu(){
+            sidemenu.style.right = '-200px'; //Whenever right is 0, it will be visible
         }
     </script>
 </body>
