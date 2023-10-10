@@ -19,11 +19,12 @@
                 <img src="Images/Yasir_Logo_2.png" class="logo" alt="Image of Logo">
                 <!-- Added the "sidemenu" id for my javascript -->
                 <ul id="sidemenu" class="snip1189">
-                    <li class="current"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <!-- Added links to the id's of the places we wanted to scroll to, then made scroll behavior in CSS -->
+                    <li class="current"><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <!-- Added below line for smaller screen -->
                     <i class="fa-solid fa-x" onclick="closemenu()"></i> <!-- anded onlick and gave it a function to activate -->
                 </ul>
@@ -88,7 +89,7 @@
         </div>
     </div>
     <!-- Services -->
-    <div class="services">
+    <div id="services" class="services">
         <div class="container">
             <h1 class="subtitle">My Services</h1>
             <div class="services-list">

@@ -5,6 +5,10 @@
     font-family: "Poppins", "sans-serif";
     box-sizing: border-box;
 }
+/* Adding some scroll behaivior for the menu options */
+html{
+    scroll-behavior: smooth;
+}
 body{
     /* For Background */
     background: #080808; 
