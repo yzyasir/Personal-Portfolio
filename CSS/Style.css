@@ -25,6 +25,10 @@ body{
 .container{
     padding: 10px 10%;
 }
+#icon{
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
 nav{
     display: flex;
     align-items: center;
@@ -127,7 +131,7 @@ nav ul li{
 }
 .row{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 /* Below means the width of the column is 35% */

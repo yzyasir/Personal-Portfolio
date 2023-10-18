@@ -16,20 +16,22 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="Images/Yasir_Logo_2.png" class="logo" alt="Image of Logo">
+                <p id="icon">Yasir.</p>
                 <!-- Added the "sidemenu" id for my javascript -->
                 <ul id="sidemenu" class="snip1189">
                     <!-- Added links to the id's of the places we wanted to scroll to, then made scroll behavior in CSS -->
-                    <li class="current"><a href="#header">Home</a></li>
+                    <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <!-- Added below line for smaller screen -->
-                    <i class="fa-solid fa-x" onclick="closemenu()"></i> <!-- anded onlick and gave it a function to activate -->
+                    <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                    <!-- anded onlick and gave it a function to activate -->
                 </ul>
-                 <!-- Added below line for smaller screen -->
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i> <!-- anded onlick and gave it a function to activate -->
+                <!-- Added below line for smaller screen -->
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                <!-- anded onlick and gave it a function to activate -->
             </nav>
             <div class="header-text">
                 <p>Web and Cloud Specialist</p>
@@ -62,6 +64,7 @@
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
@@ -82,6 +85,13 @@
                             <li><span>George Mason University</span><br>Bachelors in Biology (3.8 GPA)</li>
                             <li><span>Coding Dojo Bootcamp</span><br>Earned Wed Development Certification</li>
                             <li><span>Personal Projects</span><br>My Personal Projects</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="certifications">
+                        <ul>
+                            <li><span>Microsoft Azure Administrator</span><br>Expected Completion Date: 11/15/2023</li>
+                            <li><span>CompTIA Security+</span><br>Expiration Date: </li>
+                            <li><span>Microsoft Azure Fundamentals</span><br>Expiration: N/A</li>
                         </ul>
                     </div>
                 </div>
@@ -165,39 +175,42 @@
             <a href="#" class="btn">See More</a>
         </div>
     </div>
-<!-- Contact -->
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-regular fa-paper-plane"></i> contact@email.com</p>
-                <p><i class="fa-solid fa-phone"></i> 703-371-1140</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fa-regular fa-message"></i></a>
-                    <a href="#"><i class="fa-regular fa-message"></i></a>
-                    <a href="#"><i class="fa-regular fa-message"></i></a>
-                    <a href="#"><i class="fa-regular fa-message"></i></a>
+    <!-- Contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-paper-plane"></i> contact@email.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 703-371-1140</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-regular fa-message"></i></a>
+                        <a href="#"><i class="fa-regular fa-message"></i></a>
+                        <a href="#"><i class="fa-regular fa-message"></i></a>
+                        <a href="#"><i class="fa-regular fa-message"></i></a>
+                    </div>
+                    <a href="#" class="btn btn2">Download CV</a>
                 </div>
-                <a href="#" class="btn btn2">Download CV</a>
-            </div>
-            <div class="contact-right">
-                <form>
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="text" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
+        <div class="copyright">
+            <p>Copyright &copy; of Yasir.</p>
+        </div>
     </div>
-    <div class="copyright">
-        <p>Copyright &copy; of Yasir.</p>
-    </div>
-</div>
     <script>
         var tablinks = document.getElementsByClassName('tab-links') //3 tab title class declared
         var tabcontents = document.getElementsByClassName('tab-contents') //3 tab content classes declared
+
+        console.dir(tablinks); // console. dir() method is used to get the list of object properties of a specified object. These object properties also have child objects, from which you can inspect for further information.
+
         // Function needs to hide the link underline, and tab contents in the page
         function opentab(tabname) { //passing in tab name
             for (tablink of tablinks) { //tablinks which is defined above needs to be iterated in this for loop
@@ -214,10 +227,10 @@
     <script>
         var sidemenu = document.getElementById('sidemenu');
 
-        function openmenu(){
+        function openmenu() {
             sidemenu.style.right = '0'; //Whenever right is 0, it will be visible
         }
-        function closemenu(){
+        function closemenu() {
             sidemenu.style.right = '-200px'; //Whenever right is 0, it will be visible
         }
     </script>
